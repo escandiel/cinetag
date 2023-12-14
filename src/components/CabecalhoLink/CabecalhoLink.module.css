@@ -1,7 +1,8 @@
-.cabecalho {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.1em 20em;
-  background-color: var(--black);
+.link {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 400;
+  padding: 1em;
+  text-decoration: none;
+  cursor: pointer;
 }
