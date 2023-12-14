@@ -2,6 +2,7 @@ import Banner from "components/Banner";
 import Cabecalho from "components/Cabecalho";
 import Rodape from "components/Rodape";
 import Titulo from "components/Titulo";
+import Card from "components/Card";
 
 export default function Inicio() {
   return (
@@ -11,6 +12,11 @@ export default function Inicio() {
       <Titulo>
         <h1>Um lugar para guardar seus vídeos e filmes!</h1>
       </Titulo>
+      <Card
+        id="1"
+        titulo="Gato bonifácio"
+        capa="https://github.com/escandiel.png"
+      />
       <Rodape />
     </>
   );
