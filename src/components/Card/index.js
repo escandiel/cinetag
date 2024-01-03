@@ -4,7 +4,7 @@ import iconeFavoritar from "./favoritar.svg";
 
 export default function Card({ id, titulo, capa }) {
   const { favorito, adicionarFavorito } = useFavoritoContext();
-  // const ehFavorito = favorito.some((fav) => fav.id === id);
+  const ehFavorito = favorito.some((fav) => fav.id === id);
 
   return (
     <div className={styles.container}>

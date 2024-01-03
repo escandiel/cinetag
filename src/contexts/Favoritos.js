@@ -28,5 +28,5 @@ export function useFavoritoContext() {
     return setFavorito(novaLista);
   }
 
-  return favorito, adicionarFavorito;
+  return { favorito, adicionarFavorito };
 }
