@@ -9,9 +9,6 @@ import { useEffect, useState } from "react";
 export default function Player() {
   const [video, setVideo] = useState();
   const parametros = useParams();
-  // const video = videos.find((video) => {
-  //   return video.id === Number(parametros.id);
-  // });
 
   useEffect(() => {
     fetch(
