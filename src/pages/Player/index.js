@@ -1,15 +1,27 @@
 import Banner from "components/Banner";
 import styles from "./Player.module.css";
 import { useParams } from "react-router-dom";
-import videos from "json/db.json";
+
 import Titulo from "components/Titulo";
 import NaoEncontrada from "pages/NaoEncontrada";
+import { useEffect, useState } from "react";
 
 export default function Player() {
+  const [video, setVideo] = useState();
   const parametros = useParams();
-  const video = videos.find((video) => {
-    return video.id === Number(parametros.id);
-  });
+  // const video = videos.find((video) => {
+  //   return video.id === Number(parametros.id);
+  // });
+
+  useEffect(() => {
+    fetch(
+      `http://my-json-server.typicode.com/escandiel/cinetag-api/videos?id=${parametros.id}`
+    )
+      .then((resposta) => resposta.json())
+      .then((dados) => {
+        setVideo(...dados);
+      });
+  }, []);
 
   if (!video) {
     return <NaoEncontrada />;
